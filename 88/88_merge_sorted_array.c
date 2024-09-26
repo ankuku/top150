@@ -7,10 +7,6 @@ void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
 
     // Merge in reverse order 
     while (i>=0 && j>=0) {
-        printf("nums1[%d", i);
-        printf("] = %d", nums1[i]);
-        printf("\nnums2[%d", j);
-        printf("] = %d", nums2[j]);
         if (nums1[i] > nums2[j]) {
             nums1[k] = nums1[i];
             i--;
@@ -20,7 +16,6 @@ void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
             j--;
         }
         k--;
-        printf("\n");
     }
 
     while (j >= 0) {
