@@ -13,4 +13,4 @@ Consider the number of unique elements of nums to be k, to get accepted, you nee
 One way to think this problem is to return the Pythonic set of the array. A Pythonic set is the unique elements contained in a list/array.
 
 ### Update:
-Turns out, nope. This is not a "set" problem. The problem has a qualifier where it wants to check the "in-place" substituted numbers, reasosn of which I do nto fully understand at this moment.
+Turns out, nope. This is not a "set" problem. The problem has a qualifier where it wants to check the "in-place" substituted numbers, reasosn of which I do not fully understand at this moment.
