@@ -7,7 +7,15 @@ class Solution:
         for i in range(1, len(nums)):
             left[i] = left[i - 1] * nums[i - 1]
 
-        
+        for i in range(len(nums) - 2, -1, -1):
+            right[i] = right[i + 1] * nums[i + 1]
 
-        for i in nums:
-            if i == 0:
+        for i in range(len(nums)):
+            nums[i] = left[i] * right[i]
+
+        return nums
+
+
+if __name__ == '__main__':
+    s = Solution()
+    print(s.productExceptSelf([1, 2, 3, 4]))

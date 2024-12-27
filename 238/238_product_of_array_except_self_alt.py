@@ -2,10 +2,21 @@ from typing import List
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        left = [1] * len(nums)
-        right = [1] * len(nums)
-        for i in range(1, len(nums)):
-            left[i] = left[i - 1] * nums[i - 1]
+        len_of_nums = len(nums)
+        output = [1] * len_of_nums
 
-        for i in range(len(nums) - 2, -1, -1):
-            right[i] = right[i + 1] * nums[i + 1]
+        left_product = 1
+        for i in range(len_of_nums):
+            output[i] = left_product
+            left_product *= nums[i]
+
+        right_product = 1
+        for i in range(len_of_nums - 1, -1, -1):
+            output[i] *= right_product
+            right_product *= nums[i]
+
+        return output
+
+if __name__ == "__main__":
+    nums = [1, 2, 3, 4]
+    print(Solution().productExceptSelf(nums))
